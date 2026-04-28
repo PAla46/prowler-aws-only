@@ -16,4 +16,5 @@ requests>=2.31.0
 py-ocsf-models>=0.8.0
 uuid6>=2024.7.10
 slack-sdk>=3.21.0
+jsonschema>=4.23.0
 py-ocsf-models>=0.8.0
