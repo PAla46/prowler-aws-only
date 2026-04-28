@@ -1,10 +1,14 @@
 # Prowler AWS
 
-AWS-only security auditing tool, stripped from Prowler for CloudShell deployment.
+AWS-only security auditing tool (stripped from Prowler) for CloudShell.
 
 ## Installation
 
 ```bash
+# Install dependencies
+pip install -r requirements.txt
+
+# Install in development mode (optional)
 pip install -e .
 ```
 
@@ -12,25 +16,21 @@ pip install -e .
 
 ```bash
 # Run all AWS checks
-python -m prowler
+python -m prowler aws
 
 # Run specific service
-python -m prowler -s iam
+python -m prowler aws -s iam
 
-# Run specific check
-python -m prowler -f iam_root_mfa_enabled
+# Run with output
+python -m prowler aws -M json csv html
 
-# Output formats
-python -m prowler -M json csv html
+# List available checks
+python -m prowler aws --list-checks
 ```
 
 ## Requirements
 
-- Python 3.10+
+- Python 3.9+ (tested in CloudShell)
 - boto3 (pre-installed in CloudShell)
 
-## Based on Prowler
-
-This is an AWS-only version of [Prowler](https://github.com/prowler-cloud/prowler), designed for environments where only AWS checks are needed.
-
-License: Apache-2.0
+All dependencies are listed in requirements.txt
