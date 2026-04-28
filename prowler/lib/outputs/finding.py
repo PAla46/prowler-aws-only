@@ -19,7 +19,6 @@ from prowler.lib.outputs.compliance.compliance import get_check_compliance
 from prowler.lib.outputs.utils import unroll_tags
 from prowler.lib.utils.utils import dict_to_lowercase, get_nested_attribute
 from prowler.providers.common.provider import Provider
-from prowler.providers.github.models import GithubAppIdentityInfo, GithubIdentityInfo
 
 
 class Finding(BaseModel):

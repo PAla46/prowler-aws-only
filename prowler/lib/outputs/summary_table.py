@@ -12,7 +12,6 @@ from prowler.config.config import (
     sarif_file_suffix,
 )
 from prowler.lib.logger import logger
-from prowler.providers.github.models import GithubAppIdentityInfo, GithubIdentityInfo
 
 
 def display_summary_table(
