@@ -2,7 +2,9 @@ import argparse
 import sys
 from argparse import RawTextHelpFormatter
 
-from dashboard.lib.arguments.arguments import init_dashboard_parser
+def init_dashboard_parser(parser):
+    pass
+
 from prowler.config.config import (
     available_compliance_frameworks,
     available_output_formats,
@@ -86,6 +88,7 @@ Detailed documentation at https://docs.prowler.com
         self.__init_third_party_integrations_parser__()
 
         # Init Providers Arguments
+        init_dashboard_parser(self)
         init_providers_parser(self)
 
         # Dashboard Parser
